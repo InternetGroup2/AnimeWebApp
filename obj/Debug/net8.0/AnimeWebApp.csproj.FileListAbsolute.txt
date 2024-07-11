@@ -263,3 +263,4 @@
 /Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/obj/Debug/net8.0/AnimeWebApp.pdb
 /Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/obj/Debug/net8.0/AnimeWebApp.genruntimeconfig.cache
 /Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/obj/Debug/net8.0/ref/AnimeWebApp.dll
+/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/obj/Debug/net8.0/AnimeWebApp.sourcelink.json
