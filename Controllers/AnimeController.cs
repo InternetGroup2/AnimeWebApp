@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AnimeWebApp.Data;
 using AnimeWebApp.Models;
-using System.IO;
 
 namespace AnimeWebApp.Controllers
 {
@@ -47,9 +50,11 @@ namespace AnimeWebApp.Controllers
         }
 
         // POST: Anime/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Score,Rating,Duration,Quality,Views,Votes,ImageFile")] AnimeModel animeModel)
+        public async Task<IActionResult> Create([Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Score,Rating,Duration,Quality,Views,Votes,ImageData,ImageMimeType,ImageFile")] AnimeModel animeModel)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +63,8 @@ namespace AnimeWebApp.Controllers
                     using (var memoryStream = new MemoryStream())
                     {
                         await animeModel.ImageFile.CopyToAsync(memoryStream);
-                        animeModel.ImageData = memoryStream.ToArray();
-                        animeModel.ImageMimeType = animeModel.ImageFile.ContentType;
+                        animeModel.ImageData = memoryStream.ToArray(); // Store the image data
+                        animeModel.ImageMimeType = animeModel.ImageFile.ContentType; // Store the MIME type
                     }
                 }
 
@@ -69,6 +74,7 @@ namespace AnimeWebApp.Controllers
             }
             return View(animeModel);
         }
+
 
         // GET: Anime/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -87,9 +93,11 @@ namespace AnimeWebApp.Controllers
         }
 
         // POST: Anime/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Score,Rating,Duration,Quality,Views,Votes,ImageFile")] AnimeModel animeModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Score,Rating,Duration,Quality,Views,Votes,ImageData,ImageMimeType")] AnimeModel animeModel)
         {
             if (id != animeModel.Id)
             {
@@ -100,16 +108,6 @@ namespace AnimeWebApp.Controllers
             {
                 try
                 {
-                    if (animeModel.ImageFile != null && animeModel.ImageFile.Length > 0)
-                    {
-                        using (var memoryStream = new MemoryStream())
-                        {
-                            await animeModel.ImageFile.CopyToAsync(memoryStream);
-                            animeModel.ImageData = memoryStream.ToArray();
-                            animeModel.ImageMimeType = animeModel.ImageFile.ContentType;
-                        }
-                    }
-
                     _context.Update(animeModel);
                     await _context.SaveChangesAsync();
                 }
@@ -153,7 +151,11 @@ namespace AnimeWebApp.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var animeModel = await _context.AnimeModels.FindAsync(id);
-            _context.AnimeModels.Remove(animeModel);
+            if (animeModel != null)
+            {
+                _context.AnimeModels.Remove(animeModel);
+            }
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

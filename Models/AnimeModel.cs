@@ -14,24 +14,24 @@ namespace AnimeWebApp.Models
         public string Title { get; set; }
 
         [StringLength(200)]
-        public string JapaneseTitle { get; set; }
+        public string? JapaneseTitle { get; set; }
 
         [StringLength(1000)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [StringLength(100)]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         [StringLength(100)]
-        public string Studios { get; set; }
+        public string? Studios { get; set; }
 
         public DateTime? DateAired { get; set; }
 
         [StringLength(50)]
-        public string Status { get; set; }
+        public string? Status { get; set; }
 
         [StringLength(200)]
-        public string Genre { get; set; }
+        public string? Genre { get; set; }
 
         [Range(0, 10)]
         public double? Score { get; set; }
@@ -40,10 +40,10 @@ namespace AnimeWebApp.Models
         public double? Rating { get; set; }
 
         [StringLength(50)]
-        public string Duration { get; set; }
+        public string? Duration { get; set; }
 
         [StringLength(50)]
-        public string Quality { get; set; }
+        public string? Quality { get; set; }
 
         public int? Views { get; set; }
 
@@ -53,9 +53,9 @@ namespace AnimeWebApp.Models
         [Display(Name = "Upload File")]
         public IFormFile ImageFile { get; set; }
 
-        public byte[] ImageData { get; set; }
+        public byte[]? ImageData { get; set; }
 
         [StringLength(100)]
-        public string ImageMimeType { get; set; }
+        public string? ImageMimeType { get; set; }
     }
 }
