@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="zxx">
+@model Category;
 
 <head>
     <meta charset="UTF-8">
@@ -46,18 +45,18 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="~/Home/Index.cshtml">Homepage</a></li>
-                                <li><a href="~/categories.cshtml">Categories <span class="arrow_carrot-down"></span></a>
+                                <li class="active"><a href="~/Home/Index">Homepage</a></li>
+                                <li><a href="~/Category/Index">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="~/Category/Index.cshtml">Categories</a></li>
-                                        <li><a href="~/Anime/Details.cshtml">Anime Details</a></li>
-                                        <li><a href="~/Anime/Watching.cshtml">Anime Watching</a></li>
-                                        <li><a href="~/Blog/Details.cshtml">Blog Details</a></li>
-                                        <li><a href="~/Acc/Signup.cshtml">Sign Up</a></li>
-                                        <li><a href="~/Acc/Login.cshtml">Login</a></li>
+                                        <li><a href="~/Category/Index">Categories</a></li>
+                                        <li><a href="~/Anime/Index">Anime Details</a></li>
+                                        <li><a href="/Anime/Watching.cshtml">Anime Watching</a></li>
+                                        <li><a href="/Blog/Details.cshtml">Blog Details</a></li>
+                                        <li><a href="/Acc/Signup.cshtml">Sign Up</a></li>
+                                        <li><a href="/Acc/Login.cshtml">Login</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="~/Blog/Index.cshtml">Our Blog</a></li>
+                                <li><a href="/Blog/Index.cshtml">Our Blog</a></li>
                                 <li><a href="#">Contacts</a></li>
                             </ul>
                         </nav>

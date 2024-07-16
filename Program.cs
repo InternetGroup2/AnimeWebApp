@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using AnimeWebApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+
 var connectionString = builder.Configuration.GetConnectionString("AppDbContextConnection") ?? throw new InvalidOperationException("Connection string 'AppDbContextConnection' not found.");
 
 // 配置 SQLite 数据库连接字符串
