@@ -25,7 +25,7 @@ namespace AnimeWebApp.Migrations
                     DateAired = table.Column<DateTime>(type: "TEXT", nullable: true),
                     Status = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     Genre = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    Score = table.Column<double>(type: "REAL", nullable: true),
+                    Price = table.Column<double>(type: "REAL", nullable: true),
                     Rating = table.Column<double>(type: "REAL", nullable: true),
                     Duration = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     Quality = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),

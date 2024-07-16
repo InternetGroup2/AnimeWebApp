@@ -54,7 +54,7 @@ namespace AnimeWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Score,Rating,Duration,Quality,Views,Votes,ImageData,ImageMimeType,ImageFile")] AnimeModel animeModel)
+        public async Task<IActionResult> Create([Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Price,Rating,Duration,Quality,Views,Votes,ImageData,ImageMimeType,ImageFile")] AnimeModel animeModel)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace AnimeWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Score,Rating,Duration,Quality,Views,Votes,ImageData,ImageMimeType")] AnimeModel animeModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Price,Rating,Duration,Quality,Views,Votes,ImageData,ImageMimeType")] AnimeModel animeModel)
         {
             if (id != animeModel.Id)
             {

@@ -49,14 +49,14 @@ namespace AnimeWebApp.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
+                    b.Property<double?>("Price")
+                        .HasColumnType("REAL");
+
                     b.Property<string>("Quality")
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<double?>("Rating")
-                        .HasColumnType("REAL");
-
-                    b.Property<double?>("Score")
                         .HasColumnType("REAL");
 
                     b.Property<string>("Status")

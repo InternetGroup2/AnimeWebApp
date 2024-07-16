@@ -59,7 +59,7 @@ namespace AnimeWebApp.Migrations
                     b.Property<double?>("Rating")
                         .HasColumnType("REAL");
 
-                    b.Property<double?>("Score")
+                    b.Property<double?>("Price")
                         .HasColumnType("REAL");
 
                     b.Property<string>("Status")
