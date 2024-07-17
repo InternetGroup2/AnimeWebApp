@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4kr9j4GBYQ6cq6R07R0sXKIO+KBE6kDQ9MA5eTXfcAI=",
+  "Hash": "1CAxgh5aODN1Z5PRdlw+oTjGFFVryJo8sZFufKv+YOI=",
   "Source": "AnimeWebApp",
   "BasePath": "_content/AnimeWebApp",
   "Mode": "Default",
@@ -1195,6 +1195,25 @@
       "OriginalItemSpec": "/Users/allen/Desktop/AnimeWebApp/obj/Debug/net8.0/scopedcss/projectbundle/AnimeWebApp.bundle.scp.css"
     },
     {
+      "Identity": "/Users/allen/Desktop/AnimeWebApp/wwwroot/css/background.css",
+      "SourceId": "AnimeWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/allen/Desktop/AnimeWebApp/wwwroot/",
+      "BasePath": "_content/AnimeWebApp",
+      "RelativePath": "css/background.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/background.css"
+    },
+    {
       "Identity": "/Users/allen/Desktop/AnimeWebApp/wwwroot/css/bootstrap.min.css",
       "SourceId": "AnimeWebApp",
       "SourceType": "Discovered",
@@ -1573,6 +1592,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/fonts/FontAwesome.otf"
+    },
+    {
+      "Identity": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/1.jpg",
+      "SourceId": "AnimeWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/allen/Desktop/AnimeWebApp/wwwroot/",
+      "BasePath": "_content/AnimeWebApp",
+      "RelativePath": "img/1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/1.jpg"
     },
     {
       "Identity": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/anime/details-pic.jpg",
@@ -2219,6 +2257,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/logo.png"
+    },
+    {
+      "Identity": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/logo1.png",
+      "SourceId": "AnimeWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/allen/Desktop/AnimeWebApp/wwwroot/",
+      "BasePath": "_content/AnimeWebApp",
+      "RelativePath": "img/logo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/logo1.png"
     },
     {
       "Identity": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/normal-breadcrumb.jpg",

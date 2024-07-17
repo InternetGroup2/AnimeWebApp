@@ -864,3 +864,4 @@
 /Users/allen/Desktop/AnimeWebApp/obj/Debug/net8.0/AnimeWebApp.pdb
 /Users/allen/Desktop/AnimeWebApp/obj/Debug/net8.0/AnimeWebApp.genruntimeconfig.cache
 /Users/allen/Desktop/AnimeWebApp/obj/Debug/net8.0/ref/AnimeWebApp.dll
+/Users/allen/Desktop/AnimeWebApp/bin/Debug/net8.0/System.Text.Json.dll

@@ -14,6 +14,8 @@ namespace AnimeWebApp.Data
         
         public DbSet<AnimeModel> AnimeModels { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Blog> Blogs { get; set; }
         public DbSet<DiscussionModel> DiscussionModel{ get; set; }
         
         protected override void OnModelCreating(ModelBuilder builder)

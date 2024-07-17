@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/AnimeWebApp.bundle.scp.css"
     },
     {
+      "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/css/background.css",
+      "PackagePath": "staticwebassets/css/background.css"
+    },
+    {
       "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/css/bootstrap.min.css",
       "PackagePath": "staticwebassets/css/bootstrap.min.css"
     },
@@ -83,6 +87,10 @@
     {
       "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/fonts/fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets/fonts/fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/1.jpg",
+      "PackagePath": "staticwebassets/img/1.jpg"
     },
     {
       "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/anime/details-pic.jpg",
@@ -219,6 +227,10 @@
     {
       "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/logo.png",
       "PackagePath": "staticwebassets/img/logo.png"
+    },
+    {
+      "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/logo1.png",
+      "PackagePath": "staticwebassets/img/logo1.png"
     },
     {
       "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/img/normal-breadcrumb.jpg",
