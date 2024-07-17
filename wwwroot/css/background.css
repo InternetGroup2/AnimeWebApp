@@ -1,0 +1,10 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0b0c2a;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
