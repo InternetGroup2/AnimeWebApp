@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeWebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240716235059_InitialCreate")]
+    [Migration("20240717202741_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -109,9 +109,12 @@ namespace AnimeWebApp.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

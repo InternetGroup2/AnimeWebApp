@@ -4,46 +4,103 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<!DOCTYPE html>
+<html lang="zxx">
 
-<h4>DiscussionModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Topic" class="control-label"></label>
-                <input asp-for="Topic" class="form-control" />
-                <span asp-validation-for="Topic" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Content" class="control-label"></label>
-                <input asp-for="Content" class="form-control" />
-                <span asp-validation-for="Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PostTime" class="control-label"></label>
-                <input asp-for="PostTime" class="form-control" />
-                <span asp-validation-for="PostTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit | Anime Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" asp-append-version="true" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" asp-append-version="true" type="text/css">
+    <link rel="stylesheet" href="~/css/plyr.css" asp-append-version="true" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" asp-append-version="true" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" asp-append-version="true" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" asp-append-version="true" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloader -->
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <!-- Edit Form Begin -->
+    <div class="row " style="height: 75vh">
+        <div class="col-md-4 anime__details__form">
+            <form asp-action="Edit" method="post" style="width: 80vw" class="text-white">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="UserId" />
+                <input type="hidden" asp-for="PostTime" />
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label form-label"></label>
+                    <input asp-for="UserName" class="form-control" autocomplete="UserName"/>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Topic" class="control-label form-label"></label>
+                    <input asp-for="Topic" class="form-control" />
+                    <span asp-validation-for="Topic" the="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label form-label"></label>
+                    <textarea asp-for="Content" class="form-control"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-location-arrow"></i> Save</button>
+                    <a asp-action="Index">Back to List</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <!-- Edit Form End -->
+
+    <!-- Footer Section Begin -->
+
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="~/js/jquery-3.3.1.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/js/player.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.nice-select.min.js" asp-append-version="true"></script>
+    <script src="~/js/mixitup.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.slicknav.js" asp-append-version="true"></script>
+    <script src="~/js/owl.carousel.min.js" asp-append-version="true"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+
+</body>
+
+</html>

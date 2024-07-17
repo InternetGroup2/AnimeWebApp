@@ -98,7 +98,8 @@ namespace AnimeWebApp.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    UserName = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    UserId = table.Column<string>(type: "TEXT", nullable: false),
+                    UserName = table.Column<string>(type: "TEXT", nullable: false),
                     Topic = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
                     Content = table.Column<string>(type: "TEXT", maxLength: 4000, nullable: false),
                     PostTime = table.Column<DateTime>(type: "TEXT", nullable: false)
