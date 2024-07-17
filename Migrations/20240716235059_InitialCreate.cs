@@ -18,21 +18,21 @@ namespace AnimeWebApp.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    JapaneseTitle = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    Description = table.Column<string>(type: "TEXT", maxLength: 1000, nullable: false),
-                    Type = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    Studios = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    JapaneseTitle = table.Column<string>(type: "TEXT", maxLength: 200, nullable: true),
+                    Description = table.Column<string>(type: "TEXT", maxLength: 1000, nullable: true),
+                    Type = table.Column<string>(type: "TEXT", maxLength: 100, nullable: true),
+                    Studios = table.Column<string>(type: "TEXT", maxLength: 100, nullable: true),
                     DateAired = table.Column<DateTime>(type: "TEXT", nullable: true),
-                    Status = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Genre = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
+                    Status = table.Column<string>(type: "TEXT", maxLength: 50, nullable: true),
+                    Genre = table.Column<string>(type: "TEXT", maxLength: 200, nullable: true),
                     Price = table.Column<double>(type: "REAL", nullable: true),
                     Rating = table.Column<double>(type: "REAL", nullable: true),
-                    Duration = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Quality = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
+                    Duration = table.Column<string>(type: "TEXT", maxLength: 50, nullable: true),
+                    Quality = table.Column<string>(type: "TEXT", maxLength: 50, nullable: true),
                     Views = table.Column<int>(type: "INTEGER", nullable: true),
                     Votes = table.Column<int>(type: "INTEGER", nullable: true),
-                    ImageData = table.Column<byte[]>(type: "BLOB", nullable: false),
-                    ImageMimeType = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false)
+                    ImageData = table.Column<byte[]>(type: "BLOB", nullable: true),
+                    ImageMimeType = table.Column<string>(type: "TEXT", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -90,6 +90,22 @@ namespace AnimeWebApp.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categories", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DiscussionModel",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UserName = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    Topic = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
+                    Content = table.Column<string>(type: "TEXT", maxLength: 4000, nullable: false),
+                    PostTime = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DiscussionModel", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -259,6 +275,9 @@ namespace AnimeWebApp.Migrations
 
             migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "DiscussionModel");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

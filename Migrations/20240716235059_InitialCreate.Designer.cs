@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeWebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240716172913_RenameScoreToPrice")]
-    partial class RenameScoreToPrice
+    [Migration("20240716235059_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
