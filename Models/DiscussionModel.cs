@@ -8,9 +8,12 @@ namespace AnimeWebApp.Models
         [Key]
         public int Id { get; set; }
 
-        [StringLength(100, ErrorMessage = "Username cannot exceed 100 characters.")]
+        [Required]
+        public string UserId { get; set; }  // 使用用户ID来识别用户
+
+        [Required]
         [Display(Name = "Username")]
-        public string UserName { get; set; }  // 用户名不强制要求，可以为空
+        public string UserName { get; set; }  
 
         [Required(ErrorMessage = "Please enter a topic.")]
         [StringLength(200, ErrorMessage = "Topic cannot exceed 200 characters.")]
@@ -22,8 +25,9 @@ namespace AnimeWebApp.Models
         [Display(Name = "Content")]
         public string Content { get; set; }
 
+        [Required]
         [DataType(DataType.DateTime)]
         [Display(Name = "Post Time")]
-        public DateTime PostTime { get; set; }
+        public DateTime PostTime { get; set; } = DateTime.Now;  // 设置发帖时间为当前时间
     }
 }

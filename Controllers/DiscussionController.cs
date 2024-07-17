@@ -3,69 +3,70 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AnimeWebApp.Data;
 using AnimeWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
 
 namespace AnimeWebApp.Controllers
 {
+    [Authorize]
     public class DiscussionController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly ILogger<DiscussionController> _logger;
 
-        public DiscussionController(AppDbContext context)
+        public DiscussionController(AppDbContext context, UserManager<IdentityUser> userManager, ILogger<DiscussionController> logger)
         {
             _context = context;
+            _userManager = userManager;
+            _logger = logger;
         }
 
-        // GET: Discussion
+        private string GetUserId() => _userManager.GetUserId(User);
+
         public async Task<IActionResult> Index()
         {
             return View(await _context.DiscussionModel.ToListAsync());
         }
 
-        // GET: Discussion/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var discussionModel = await _context.DiscussionModel
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (discussionModel == null)
-            {
-                return NotFound();
-            }
-
-            return View(discussionModel);
-        }
-
-        // GET: Discussion/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Discussion/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserName,Topic,Content,PostTime")] DiscussionModel discussionModel)
+        public async Task<IActionResult> Create([Bind("UserName,Topic,Content")] DiscussionModel discussionModel)
         {
-            if (ModelState.IsValid)
+            var userId = GetUserId();
+            _logger.LogInformation("Attempting to create a post with UserId: {UserId}", userId);
+
+            if (string.IsNullOrEmpty(userId))
             {
-                _context.Add(discussionModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _logger.LogWarning("UserId is null or empty. Attempt to retrieve failed.");
+                ModelState.AddModelError("", "Cannot retrieve user ID.");
+                return View(discussionModel);
             }
-            return View(discussionModel);
+
+
+            discussionModel.UserId = userId;
+            discussionModel.PostTime = DateTime.Now;
+            _context.Add(discussionModel);
+            await _context.SaveChangesAsync();
+            _logger.LogInformation("Post created successfully with UserId: {UserId}", userId);
+            return RedirectToAction(nameof(Index));
+
+             if (!ModelState.IsValid)
+            {
+                _logger.LogWarning("Model state is invalid. Errors: {ModelStateErrors}", ModelState);
+                return View(discussionModel);
+            }
         }
 
-        // GET: Discussion/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,49 +75,49 @@ namespace AnimeWebApp.Controllers
             }
 
             var discussionModel = await _context.DiscussionModel.FindAsync(id);
-            if (discussionModel == null)
+            if (discussionModel == null || discussionModel.UserId != GetUserId())
             {
-                return NotFound();
+                return NotFound("Unauthorized access or post does not exist.");
             }
+
             return View(discussionModel);
         }
 
-        // POST: Discussion/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Topic,Content,PostTime")] DiscussionModel discussionModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Topic,Content")] DiscussionModel discussionModel)
         {
             if (id != discussionModel.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(discussionModel);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!DiscussionModelExists(discussionModel.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                return View(discussionModel);
+            }
+
+            try
+            {
+                discussionModel.UserId = GetUserId();
+                _context.Update(discussionModel);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(discussionModel);
+            catch (DbUpdateConcurrencyException ex)
+            {
+                if (!DiscussionModelExists(discussionModel.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogError(ex, "Failed to update the discussion post.");
+                    throw;
+                }
+            }
         }
 
-        // GET: Discussion/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,29 +125,28 @@ namespace AnimeWebApp.Controllers
                 return NotFound();
             }
 
-            var discussionModel = await _context.DiscussionModel
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (discussionModel == null)
+            var discussionModel = await _context.DiscussionModel.FirstOrDefaultAsync(m => m.Id == id);
+            if (discussionModel == null || discussionModel.UserId != GetUserId())
             {
-                return NotFound();
+                return NotFound("Unauthorized access or post does not exist.");
             }
 
             return View(discussionModel);
         }
 
-        // POST: Discussion/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var discussionModel = await _context.DiscussionModel.FindAsync(id);
-            if (discussionModel != null)
+            if (discussionModel != null && discussionModel.UserId == GetUserId())
             {
                 _context.DiscussionModel.Remove(discussionModel);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return NotFound("Unauthorized access or post does not exist.");
         }
 
         private bool DiscussionModelExists(int id)
