@@ -8610,19 +8610,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/chelsie/.nuget/packages/": {}
+    "/Users/allen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/AnimeWebApp.csproj",
+      "projectUniqueName": "/Users/allen/Desktop/AnimeWebApp/AnimeWebApp.csproj",
       "projectName": "AnimeWebApp",
-      "projectPath": "/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/AnimeWebApp.csproj",
-      "packagesPath": "/Users/chelsie/.nuget/packages/",
-      "outputPath": "/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/obj/",
+      "projectPath": "/Users/allen/Desktop/AnimeWebApp/AnimeWebApp.csproj",
+      "packagesPath": "/Users/allen/.nuget/packages/",
+      "outputPath": "/Users/allen/Desktop/AnimeWebApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/chelsie/.nuget/NuGet/NuGet.Config"
+        "/Users/allen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -8707,7 +8707,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
