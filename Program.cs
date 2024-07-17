@@ -16,6 +16,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<AppDbContext>();
 
+//Email service
+builder.Services.AddTransient<EmailService>();
+
+
 // 添加服务到容器
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();

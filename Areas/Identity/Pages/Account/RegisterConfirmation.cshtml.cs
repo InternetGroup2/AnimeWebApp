@@ -18,13 +18,13 @@ namespace AnimeWebApp.Areas.Identity.Pages.Account
     public class RegisterConfirmationModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly IEmailSender _sender;
-
-        public RegisterConfirmationModel(UserManager<IdentityUser> userManager, IEmailSender sender)
+        private readonly EmailService _emailService;
+        public RegisterConfirmationModel(UserManager<IdentityUser> userManager, EmailService emailService)
         {
             _userManager = userManager;
-            _sender = sender;
+            _emailService = emailService; 
         }
+
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -59,19 +59,23 @@ namespace AnimeWebApp.Areas.Identity.Pages.Account
             }
 
             Email = email;
-            // Once you add a real email sender, you should remove this code that lets you confirm the account
-            DisplayConfirmAccountLink = true;
-            if (DisplayConfirmAccountLink)
-            {
-                var userId = await _userManager.GetUserIdAsync(user);
-                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                EmailConfirmationUrl = Url.Page(
-                    "/Account/ConfirmEmail",
-                    pageHandler: null,
-                    values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                    protocol: Request.Scheme);
-            }
+            Email = email;
+            var userId = await _userManager.GetUserIdAsync(user);
+            var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            EmailConfirmationUrl = Url.Page(
+                "/Account/ConfirmEmail",
+                pageHandler: null,
+                values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                protocol: Request.Scheme);
+
+    
+            var subject = "Confirm your email";
+            var body = $"Please confirm your account by <a href='{EmailConfirmationUrl}'>clicking here</a>.";
+
+            _emailService.SendEmail(email, subject, body);
+
+            DisplayConfirmAccountLink = false;
 
             return Page();
         }

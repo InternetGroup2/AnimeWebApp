@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/AnimeWebApp.csproj": {}
+    "/Users/touka/AnimeWebApp/AnimeWebApp.csproj": {}
   },
   "projects": {
-    "/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/AnimeWebApp.csproj": {
+    "/Users/touka/AnimeWebApp/AnimeWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/AnimeWebApp.csproj",
+        "projectUniqueName": "/Users/touka/AnimeWebApp/AnimeWebApp.csproj",
         "projectName": "AnimeWebApp",
-        "projectPath": "/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/AnimeWebApp.csproj",
-        "packagesPath": "/Users/chelsie/.nuget/packages/",
-        "outputPath": "/Users/chelsie/Desktop/Internet-6844 /InternetProject/AnimeWebApp/AnimeWebApp/obj/",
+        "projectPath": "/Users/touka/AnimeWebApp/AnimeWebApp.csproj",
+        "packagesPath": "/Users/touka/.nuget/packages/",
+        "outputPath": "/Users/touka/AnimeWebApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/chelsie/.nuget/NuGet/NuGet.Config"
+          "/Users/touka/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
