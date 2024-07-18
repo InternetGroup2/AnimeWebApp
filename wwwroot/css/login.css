@@ -1,0 +1,106 @@
+body,
+html {
+    height: 100%;
+    font-family: "Mulish", sans-serif;
+    background-image: url('../img/guo_background.png'); 
+    background-size: 100%;
+    background-position: center top 80px;
+    color: #3d3d3d; 
+}
+
+
+
+.section-title h4 {
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 20px;
+}
+
+.section-title h4:after {
+    position: absolute;
+    left: 0;
+    top: -6px;
+    height: 32px;
+    width: 4px;
+    background: #e53637;
+    content: "";
+}
+
+.login_form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact__form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact__form input,
+
+
+.site-btn {
+    padding: 15px 40px; 
+    font-size: 15px;
+    width: 100%; 
+    text-align: center; 
+    border: none; 
+    border-radius: 5px;
+}
+
+.contact__form button:hover {
+    background: #d32f2f;
+}
+
+.textarea{
+
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+
+}
+
+.textarea p {
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.textarea a {
+    color: #c6c6c6;
+}
+
+.bubble {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e53637;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.bubble::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 20px;
+    border-color: #e53637 transparent transparent transparent; /* 控制三角形颜色 */
+}
+
+.light-text{
+    color: #fff;
+}
+
+
+

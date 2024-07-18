@@ -59,7 +59,6 @@ namespace AnimeWebApp.Areas.Identity.Pages.Account
             }
 
             Email = email;
-            Email = email;
             var userId = await _userManager.GetUserIdAsync(user);
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
