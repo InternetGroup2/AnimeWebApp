@@ -13,16 +13,16 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(connectionString));
 
 // 配置 Identity 服务
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<AppDbContext>();
 
 // //Email service
-// builder.Services.AddTransient<EmailService>();
+builder.Services.AddTransient<EmailService>();
 
 
 // // 添加服务到容器
-// builder.Services.AddControllersWithViews();
-// builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 // 配置 Identity 选项
 builder.Services.Configure<IdentityOptions>(options =>
