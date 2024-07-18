@@ -97,22 +97,57 @@ namespace AnimeWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Price,Rating,Duration,Quality,Views,Votes,ImageData,ImageMimeType")] AnimeModel animeModel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,JapaneseTitle,Description,Type,Studios,DateAired,Status,Genre,Price,Rating,Duration,Quality,Views,Votes,ImageData,ImageMimeType,ImageFile")] AnimeModel animeModel)
         {
+            // Check if the provided id matches the model's id
             if (id != animeModel.Id)
             {
                 return NotFound();
             }
 
+            // Validate the model state
             if (ModelState.IsValid)
             {
                 try
                 {
+                    // Retrieve the existing model from the database
+                    var existingModel = await _context.AnimeModels.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id);
+
+                    if (existingModel == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Update the model properties
+                    _context.Entry(animeModel).State = EntityState.Modified;
+
+                    // Check if an image file is uploaded
+                    if (animeModel.ImageFile != null && animeModel.ImageFile.Length > 0)
+                    {
+                        // Convert the uploaded image file to a byte array
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            await animeModel.ImageFile.CopyToAsync(memoryStream);
+                            animeModel.ImageData = memoryStream.ToArray(); // Store the image data
+                            animeModel.ImageMimeType = animeModel.ImageFile.ContentType; // Store the MIME type
+                        }
+                    }
+                    else
+                    {
+                        // If no new image is uploaded, retain the existing image data and mime type
+                        animeModel.ImageData = existingModel.ImageData;
+                        animeModel.ImageMimeType = existingModel.ImageMimeType;
+                    }
+
+                    // Update the model in the database context
                     _context.Update(animeModel);
+
+                    // Save changes to the database
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
+                    // Handle concurrency issues
                     if (!AnimeModelExists(animeModel.Id))
                     {
                         return NotFound();
@@ -122,10 +157,17 @@ namespace AnimeWebApp.Controllers
                         throw;
                     }
                 }
+
+                // Redirect to the index action after successful edit
                 return RedirectToAction(nameof(Index));
             }
+
+            // Return the view with the model if the model state is invalid
             return View(animeModel);
         }
+
+
+
 
         // GET: Anime/Delete/5
         public async Task<IActionResult> Delete(int? id)

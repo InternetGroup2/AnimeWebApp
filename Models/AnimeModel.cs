@@ -51,7 +51,7 @@ namespace AnimeWebApp.Models
 
         [NotMapped]
         [Display(Name = "Upload File")]
-        public IFormFile ImageFile { get; set; }
+        public IFormFile? ImageFile { get; set; }
 
         public byte[]? ImageData { get; set; }
 

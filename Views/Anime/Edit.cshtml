@@ -4,106 +4,178 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<!DOCTYPE html>
+<html lang="zxx">
 
-<h4>AnimeModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="JapaneseTitle" class="control-label"></label>
-                <input asp-for="JapaneseTitle" class="form-control" />
-                <span asp-validation-for="JapaneseTitle" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Type" class="control-label"></label>
-                <input asp-for="Type" class="form-control" />
-                <span asp-validation-for="Type" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Studios" class="control-label"></label>
-                <input asp-for="Studios" class="form-control" />
-                <span asp-validation-for="Studios" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DateAired" class="control-label"></label>
-                <input asp-for="DateAired" class="form-control" />
-                <span asp-validation-for="DateAired" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Genre" class="control-label"></label>
-                <input asp-for="Genre" class="form-control" />
-                <span asp-validation-for="Genre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rating" class="control-label"></label>
-                <input asp-for="Rating" class="form-control" />
-                <span asp-validation-for="Rating" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Duration" class="control-label"></label>
-                <input asp-for="Duration" class="form-control" />
-                <span asp-validation-for="Duration" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quality" class="control-label"></label>
-                <input asp-for="Quality" class="form-control" />
-                <span asp-validation-for="Quality" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Views" class="control-label"></label>
-                <input asp-for="Views" class="form-control" />
-                <span asp-validation-for="Views" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Votes" class="control-label"></label>
-                <input asp-for="Votes" class="form-control" />
-                <span asp-validation-for="Votes" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ImageData" class="control-label"></label>
-                <input asp-for="ImageData" class="form-control" />
-                <span asp-validation-for="ImageData" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ImageMimeType" class="control-label"></label>
-                <input asp-for="ImageMimeType" class="form-control" />
-                <span asp-validation-for="ImageMimeType" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+</head>
+
+<body style="color: white;">
+    <!-- Page Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <!-- Anime Edit Section Begin -->
+    <section class="anime-details spad">
+        <div class="container">
+            <div class="anime__details__content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        @if (Model.ImageData != null)
+                        {
+                            <div class="anime__details__pic" style="background-image: url('data:@Model.ImageMimeType;base64,@Convert.ToBase64String(Model.ImageData)'); background-size: cover; background-position: center; width: 100%; height: 400px;">
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="anime__details__pic" style="background-color: #ccc; width: 100%; height: 400px; display: flex; align-items: center; justify-content: center;">
+                                <span>No Image Available</span>
+                            </div>
+                        }
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="anime__details__text">
+                            <div class="anime__details__title">
+                                <h3>Edit @Model.Title</h3>
+                            </div>
+                            <form asp-action="Edit" enctype="multipart/form-data">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="Id" />
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label asp-for="Title" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Title" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Title" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="JapaneseTitle" class="control-label" style="color: white;"></label>
+                                            <input asp-for="JapaneseTitle" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="JapaneseTitle" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Description" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Description" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Description" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Type" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Type" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Type" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Studios" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Studios" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Studios" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="DateAired" class="control-label" style="color: white;"></label>
+                                            <input asp-for="DateAired" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="DateAired" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Status" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Status" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Status" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Genre" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Genre" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Genre" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label asp-for="Price" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Price" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Price" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Rating" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Rating" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Rating" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Duration" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Duration" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Duration" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Quality" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Quality" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Quality" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Views" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Views" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Views" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Votes" class="control-label" style="color: white;"></label>
+                                            <input asp-for="Votes" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="Votes" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="ImageFile" class="control-label" style="color: white;"></label>
+                                            <input asp-for="ImageFile" class="form-control" style="color: black;" type="file" accept="image/*" />
+                                            <span asp-validation-for="ImageFile" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="ImageMimeType" class="control-label" style="color: white;"></label>
+                                            <input asp-for="ImageMimeType" class="form-control" style="color: black;" />
+                                            <span asp-validation-for="ImageMimeType" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                </div>
+                            </form>
+                            <div class="anime__details__btn">
+                                <a asp-action="Index" class="follow-btn"><i class="fa fa-arrow-left"></i> Back to List</a>
+                                <a asp-action="Edit" asp-route-id="@Model?.Id" class="watch-btn"><span>Save Changes</span> <i class="fa fa-save"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Anime Edit Section End -->
+
+    <!-- Js Plugins -->
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/player.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/mixitup.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+
+</html>
