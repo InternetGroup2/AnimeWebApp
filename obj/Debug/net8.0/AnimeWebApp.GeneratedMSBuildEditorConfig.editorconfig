@@ -17,151 +17,151 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AnimeWebApp
 build_property.RootNamespace = AnimeWebApp
-build_property.ProjectDir = /Users/allen/Desktop/AnimeWebApp/
+build_property.ProjectDir = /Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/allen/Desktop/AnimeWebApp
+build_property.MSBuildProjectDirectory = /Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/allen/Desktop/AnimeWebApp/Areas/Identity/Pages/Account/Login.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Areas/Identity/Pages/Account/Logout.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Areas/Identity/Pages/Account/Register.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Areas/Identity/Pages/_ViewImports.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Areas/Identity/Pages/_ViewStart.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Anime/Create.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Anime/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWUvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Anime/Delete.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Anime/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWUvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Anime/Details.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Anime/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWUvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Anime/Edit.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Anime/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWUvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Anime/Index.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Anime/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWUvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/AnimeOrigin/Create.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/AnimeOrigin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWVPcmlnaW4vQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/AnimeOrigin/Edit.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/AnimeOrigin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWVPcmlnaW4vRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/AnimeOrigin/Index.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/AnimeOrigin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWVPcmlnaW4vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/AnimeOrigin/Watching.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/AnimeOrigin/Watching.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQW5pbWVPcmlnaW4vV2F0Y2hpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Blog/Details.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Blog/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Blog/Index.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Category/Index.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/ContactUs/Index.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/ContactUs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFjdFVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Discussion/Create.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Discussion/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzY3Vzc2lvbi9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Discussion/Delete.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Discussion/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzY3Vzc2lvbi9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Discussion/Details.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Discussion/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzY3Vzc2lvbi9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Discussion/Edit.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Discussion/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzY3Vzc2lvbi9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Discussion/Index.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Discussion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlzY3Vzc2lvbi9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Home/Index.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Home/Main.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Home/Main.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9NYWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Home/Privacy.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Shared/Error.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Shared/_LoginPartial.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/_ViewImports.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/_ViewStart.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/allen/Desktop/AnimeWebApp/Views/Shared/_Layout.cshtml]
+[/Users/chelsie/Desktop/Internet-6844 /InternetProject/InternetProject/AnimeWebApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-50okbinxks
