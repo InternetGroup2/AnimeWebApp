@@ -64,6 +64,9 @@
                             <div class="section-title">
                                 <h5><a asp-action="Create" class="text-white">Discussion</a></h5>
                             </div>
+                            <div class="anime__details__btn" style="text-align: right; font-size: small;">
+                                <p  class="follow-btn"><i class="fa fa-location-arrow"></i><a asp-action="Create" class="text-white ml-3 text-xl">Post Content</a></p>
+                                </div>
                             @foreach (var item in Model)
                             {
                                 var imageUrl = imageUrls[random.Next(imageUrls.Count)];
@@ -93,11 +96,6 @@
                             }
                         </div>
 
-                        <div class="anime__details__form">
-                            <form>
-                                <button><i class="fa fa-location-arrow"></i><a asp-action="Create" class="text-white ml-3 text-xl">Post Content</a></button>
-                            </form>
-                        </div>
                 </div>
                 
                     <div class="col-lg-4 col-md-4">

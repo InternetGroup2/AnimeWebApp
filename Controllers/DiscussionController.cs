@@ -75,13 +75,18 @@ namespace AnimeWebApp.Controllers
             }
 
             var discussionModel = await _context.DiscussionModel.FindAsync(id);
-            if (discussionModel == null || discussionModel.UserId != GetUserId())
+            if (discussionModel == null)
             {
-                return NotFound("Unauthorized access or post does not exist.");
+                return NotFound("Post does not exist.");
+            }
+            if (discussionModel.UserId != GetUserId())
+            {
+                return Unauthorized("Unauthorized access.");
             }
 
             return View(discussionModel);
         }
+            
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -90,11 +95,6 @@ namespace AnimeWebApp.Controllers
             if (id != discussionModel.Id)
             {
                 return NotFound();
-            }
-
-            if (!ModelState.IsValid)
-            {
-                return View(discussionModel);
             }
 
             try
@@ -113,10 +113,12 @@ namespace AnimeWebApp.Controllers
                 else
                 {
                     _logger.LogError(ex, "Failed to update the discussion post.");
-                    throw;
+                    ModelState.AddModelError("", "Failed to update the post due to a concurrency issue.");
+                    return View(discussionModel);
                 }
             }
         }
+
 
         public async Task<IActionResult> Delete(int? id)
         {
