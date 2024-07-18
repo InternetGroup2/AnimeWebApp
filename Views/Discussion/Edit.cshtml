@@ -46,7 +46,7 @@
     <!-- Edit Form Begin -->
     <div class="row " style="height: 75vh">
         <div class="col-md-4 anime__details__form">
-            <form asp-action="Edit" method="post" style="width: 80vw" class="text-white">
+            <form asp-action="Edit" method="post" style="width: 60vw" class="text-white">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="Id" />
                 <input type="hidden" asp-for="UserId" />
@@ -67,7 +67,7 @@
                     <span asp-validation-for="Content" class="text-danger"></span>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-location-arrow"></i> Save</button>
+                    <button type="submit" class="btn"><i class="fa fa-location-arrow"></i> Save</button>
                     <a asp-action="Index">Back to List</a>
                 </div>
                 
