@@ -3,41 +3,73 @@
     ViewData["Title"] = "Contact Us";
 }
 
-<h2>Contact Us</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-@if (ViewBag.Message != null)
-{
-    <div class="alert alert-success">@ViewBag.Message</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+    <link rel="stylesheet" href="~/css/contact.css" type="text/css">
+</head>
 
-    @if (ViewBag.Redirect != null && (bool)ViewBag.Redirect)
-    {
-        <script>
-            setTimeout(function() {
-                window.location.href = '@Url.Action("Index", "Home")';
-            }, 5000);
-        </script>
+<body>
+
+    <section class="contact spad">
+        <div class="container">
+            <div class="section-title">
+                <h4>Contact Us</h4>
+            </div>
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-success">@ViewBag.Message</div>
+
+                @if (ViewBag.Redirect != null && (bool)ViewBag.Redirect)
+                {
+                    <script>
+                        setTimeout(function () {
+                            window.location.href = '@Url.Action("Index", "Home")';
+                        }, 5000);
+                    </script>
+                }
+            }
+
+            <div class="contact__form">
+                <form asp-action="Index" method="post">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input asp-for="Name" class="form-control" placeholder="Your Name" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input asp-for="Email" class="form-control" placeholder="Your Email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <textarea asp-for="Comment" class="form-control" placeholder="Your Message"></textarea>
+                                <span asp-validation-for="Comment" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="site-btn">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     }
-}
+</body>
 
-<form asp-action="Index" method="post">
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Comment"></label>
-        <textarea asp-for="Comment" class="form-control"></textarea>
-        <span asp-validation-for="Comment" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+</html>

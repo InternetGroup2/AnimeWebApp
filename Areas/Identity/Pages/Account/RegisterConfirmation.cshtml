@@ -4,20 +4,38 @@
     ViewData["Title"] = "Register confirmation";
 }
 
-<h1>@ViewData["Title"]</h1>
-@{
-    if (@Model.DisplayConfirmAccountLink)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+    <link rel="stylesheet" href="~/css/login.css" type="text/css">
+</head>
+
+<body>
+    <div class="section-title">
+        <h4>Register Confirmation</h4>
+    </div>
+
+    @if (Model.DisplayConfirmAccountLink)
     {
-<p>
-    This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
-    Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
-</p>
+        <p>
+            This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
+            Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
+        </p>
     }
     else
     {
-<p>
-        Please check your email to confirm your account.
-</p>
+       <p class="light-text">
+            Please check your email to confirm your account.
+        </p>
     }
-}
+</body>
 
+</html>

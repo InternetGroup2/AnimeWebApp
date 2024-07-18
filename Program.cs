@@ -16,7 +16,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<AppDbContext>();
 
-// //Email service
+
+
+//Email service
 builder.Services.AddTransient<EmailService>();
 
 
