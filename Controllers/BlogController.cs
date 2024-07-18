@@ -32,19 +32,7 @@ public class BlogController : Controller
 
     public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var blog = await _context.Blogs
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (blog == null)
-            {
-                return NotFound();
-            }
-
-            return View(blog);
+            return View();
         }
 
     // Additional actions can be added here such as Create, Edit, Delete, etc.
