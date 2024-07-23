@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/N1gaooDUDxEJMNywGHg5S3ETnJ9wG6KRRhk6BK7zvY=",
+  "Hash": "MbHlKIiQuOhaESaDwpv6EtNz7vghZajEK2ZPI87vBkw=",
   "Source": "AnimeWebApp",
   "BasePath": "_content/AnimeWebApp",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/contact.css"
+    },
+    {
+      "Identity": "/Users/allen/Desktop/AnimeWebApp/wwwroot/css/custome.css",
+      "SourceId": "AnimeWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/allen/Desktop/AnimeWebApp/wwwroot/",
+      "BasePath": "_content/AnimeWebApp",
+      "RelativePath": "css/custome.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/custome.css"
     },
     {
       "Identity": "/Users/allen/Desktop/AnimeWebApp/wwwroot/css/elegant-icons.css",

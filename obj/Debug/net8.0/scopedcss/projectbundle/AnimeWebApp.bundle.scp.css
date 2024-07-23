@@ -1,6 +1,15 @@
 /* _content/AnimeWebApp/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+/* Change the navbar background color */
+.navbar[b-50okbinxks] {
+  background-color: #0b0c28 !important; /* Set your desired background color */
+  color: #fff !important; /* Set the text color */
+}
+
+.navbar a[b-50okbinxks] {
+  color: #fff !important; /* Set the link color inside the navbar */
+}
 
 a.navbar-brand[b-50okbinxks] {
   white-space: normal;
@@ -18,7 +27,8 @@ a[b-50okbinxks] {
   border-color: #1861ac;
 }
 
-.nav-pills .nav-link.active[b-50okbinxks], .nav-pills .show > .nav-link[b-50okbinxks] {
+.nav-pills .nav-link.active[b-50okbinxks],
+.nav-pills .show > .nav-link[b-50okbinxks] {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
@@ -32,7 +42,7 @@ a[b-50okbinxks] {
 }
 
 .box-shadow[b-50okbinxks] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
 }
 
 button.accept-policy[b-50okbinxks] {

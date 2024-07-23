@@ -89,7 +89,6 @@
 /Users/allen/Desktop/AnimeWebApp/bin/Debug/net8.0/System.Runtime.Caching.dll
 /Users/allen/Desktop/AnimeWebApp/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
 /Users/allen/Desktop/AnimeWebApp/bin/Debug/net8.0/System.Security.Permissions.dll
-/Users/allen/Desktop/AnimeWebApp/bin/Debug/net8.0/System.Text.Json.dll
 /Users/allen/Desktop/AnimeWebApp/bin/Debug/net8.0/System.Windows.Extensions.dll
 /Users/allen/Desktop/AnimeWebApp/bin/Debug/net8.0/af/Humanizer.resources.dll
 /Users/allen/Desktop/AnimeWebApp/bin/Debug/net8.0/ar/Humanizer.resources.dll

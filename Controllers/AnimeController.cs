@@ -19,12 +19,62 @@ namespace AnimeWebApp.Controllers
             _context = context;
         }
 
+        public async Task<IActionResult> Index(AnimeModel searchModel)
+        {
+            IQueryable<AnimeModel> query = _context.AnimeModels;
+
+            if (!string.IsNullOrWhiteSpace(searchModel.Title))
+                query = query.Where(a => a.Title.Contains(searchModel.Title));
+            
+            if (!string.IsNullOrWhiteSpace(searchModel.JapaneseTitle))
+                query = query.Where(a => a.JapaneseTitle.Contains(searchModel.JapaneseTitle));
+            
+            if (!string.IsNullOrWhiteSpace(searchModel.Description))
+                query = query.Where(a => a.Description.Contains(searchModel.Description));
+            
+            if (!string.IsNullOrWhiteSpace(searchModel.Type))
+                query = query.Where(a => a.Type == searchModel.Type);
+            
+            if (!string.IsNullOrWhiteSpace(searchModel.Studios))
+                query = query.Where(a => a.Studios.Contains(searchModel.Studios));
+            
+            if (searchModel.DateAired.HasValue)
+                query = query.Where(a => a.DateAired >= searchModel.DateAired);
+            
+            if (!string.IsNullOrWhiteSpace(searchModel.Status))
+                query = query.Where(a => a.Status == searchModel.Status);
+            
+            if (!string.IsNullOrWhiteSpace(searchModel.Genre))
+                query = query.Where(a => a.Genre.Contains(searchModel.Genre));
+            
+            if (searchModel.Price.HasValue)
+                query = query.Where(a => a.Price >= searchModel.Price);
+            
+            if (searchModel.Rating.HasValue)
+                query = query.Where(a => a.Rating >= searchModel.Rating);
+            
+            if (!string.IsNullOrWhiteSpace(searchModel.Duration))
+                query = query.Where(a => a.Duration == searchModel.Duration);
+            
+            if (!string.IsNullOrWhiteSpace(searchModel.Quality))
+                query = query.Where(a => a.Quality == searchModel.Quality);
+            
+            if (searchModel.Views.HasValue)
+                query = query.Where(a => a.Views >= searchModel.Views);
+            
+            if (searchModel.Votes.HasValue)
+                query = query.Where(a => a.Votes >= searchModel.Votes);
+
+            return View(await query.ToListAsync());
+        }
+
+
         // GET: Anime
-        public async Task<IActionResult> Index()
+/*        public async Task<IActionResult> Index()
         {
             return View(await _context.AnimeModels.ToListAsync());
         }
-
+*/
         // GET: Anime/Details/5
         public async Task<IActionResult> Details(int? id)
         {

@@ -9,14 +9,27 @@
     <link rel="stylesheet" href="~/AnimeWebApp.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/background.css">
-</head>
+    <link rel="stylesheet" href="~/css/custome.css">
+        <style>
+        /* Change the navbar background color */
+        .navbar {
+            background-color: #0B0C28; /* Replace with your desired color */
+        }
+
+        /* Change the navbar text color */
+        .navbar a, .navbar-brand {
+            color: #ffffff; /* Replace with your desired text color */
+        }
+
+    </style>
+    </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
-                <img src="~/img/logo1.png" height="60px" width="100px"></a>
+                <img src="~/img/logo.png" height="10px" width="50px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

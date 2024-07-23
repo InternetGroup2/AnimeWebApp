@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets/css/contact.css"
     },
     {
+      "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/css/custome.css",
+      "PackagePath": "staticwebassets/css/custome.css"
+    },
+    {
       "Id": "/Users/allen/Desktop/AnimeWebApp/wwwroot/css/elegant-icons.css",
       "PackagePath": "staticwebassets/css/elegant-icons.css"
     },

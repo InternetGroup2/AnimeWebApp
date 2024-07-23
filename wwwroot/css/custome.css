@@ -1,0 +1,10 @@
+/* Change the navbar background color */
+.navbar {
+  background-color: #0b0c28 !important; /* Replace with your desired color */
+}
+
+/* Change the navbar text color */
+.navbar a,
+.navbar-brand {
+  color: #ffffff !important; /* Replace with your desired text color */
+}
